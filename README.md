@@ -2,18 +2,11 @@
 
 Welcome to **BookSense** – an AI-powered semantic book recommender! This project leverages state-of-the-art NLP and vector search to help users discover books that match their interests, categories, and emotional tone. Whether you're a developer, data scientist, or book lover, BookSense is designed to be easy to set up, extend, and use.
 
----
-
 ## ✨ Features
 
-- **Semantic Book Recommendations:** Find books based on natural language queries, not just keywords.
-- **Emotion & Category Filtering:** Filter recommendations by emotional tone (happy, sad, suspenseful, etc.) and category.
-- **Modern Gradio Dashboard:** User-friendly web interface for instant recommendations.
-- **Rich Data Processing:** Includes scripts and notebooks for data cleaning, emotion analysis, and category classification.
-- **OpenAI Embeddings & LangChain:** Uses advanced embeddings and vector search for high-quality results.
-- **Jupyter Notebooks:** For data exploration, sentiment analysis, and model experimentation.
+BookSense offers semantic book recommendations that go beyond simple keyword matching, using natural language queries to understand user preferences. The system includes emotion and category filtering capabilities, allowing users to find books based on emotional tone such as happy, sad, or suspenseful content, combined with specific genre preferences. The modern Gradio dashboard provides a user-friendly web interface for instant recommendations, while rich data processing scripts and notebooks handle data cleaning, emotion analysis, and category classification.
 
----
+The platform utilizes OpenAI embeddings and LangChain for advanced vector search capabilities, delivering high-quality recommendation results. Interactive Jupyter notebooks are included for data exploration, sentiment analysis, and model experimentation, making it accessible for both end users and developers who want to understand or modify the underlying algorithms.
 
 ## 🛠️ Tech Stack
 
@@ -35,8 +28,6 @@ Welcome to **BookSense** – an AI-powered semantic book recommender! This proje
 - JupyterLab/Notebook
 - Python virtual environment (`venv`)
 - MIT License
-
----
 
 ## 🗂️ Project Structure
 
@@ -61,24 +52,11 @@ BookSense/
 └── .gitignore, .gitattributes  # Git config
 ```
 
----
-
 ## 📂 Data Files
 
-This project uses several CSV and text files for book metadata and embeddings:
+This project uses several CSV and text files for book metadata and embeddings. The `books_cleaned.csv` file contains cleaned book data after initial processing, while `books_with_categories.csv` includes books with classified categories and `books_with_emotions.csv` contains books with emotion scores. The `tagged_description.txt` file provides ISBN-tagged book descriptions specifically formatted for vector search operations.
 
-- `books_cleaned.csv`: Cleaned book data after initial processing.
-- `books_with_categories.csv`: Books with classified categories.
-- `books_with_emotions.csv`: Books with emotion scores.
-- `tagged_description.txt`: ISBN-tagged book descriptions for vector search.
-
-If you want to regenerate these files, use the provided Jupyter notebooks in the order:
-1. `data-exploration.ipynb`
-2. `text-classification.ipynb`
-3. `sentiment-analysis.ipynb`
-4. `vector-search.ipynb`
-
----
+If you want to regenerate these files, use the provided Jupyter notebooks in the following order: `data-exploration.ipynb` for initial data cleaning, `text-classification.ipynb` for category assignment, `sentiment-analysis.ipynb` for emotion scoring, and finally `vector-search.ipynb` for testing and optimizing the recommendation algorithms.
 
 ## 🚦 Prerequisites & System Requirements
 
@@ -90,8 +68,6 @@ If you want to regenerate these files, use the provided Jupyter notebooks in the
 
 > **Note:** Python 3.13 is very new. If you have trouble installing it, consider using [pyenv](https://github.com/pyenv/pyenv) or a similar tool to manage Python versions.
 
----
-
 ## ⚙️ Environment Variables
 
 Create a `.env` file in the project root with the following:
@@ -102,8 +78,6 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 > **Note:** You can obtain an API key from [OpenAI](https://platform.openai.com/account/api-keys).
 
----
-
 ## 🏗️ Installation
 
 1. **Clone the repository:**
@@ -112,31 +86,24 @@ OPENAI_API_KEY=your_openai_api_key_here
    cd BookSense
    ```
 
-2. **Create a virtual environment:**
-   ```bash
-   python -m venv venv
-   ```
-
-3. **Activate the virtual environment:**
+2. **Activate the virtual environment:**
    - **Windows:**
      ```bash
-     .\venv\Scripts\activate
+     Scripts\activate.bat
      ```
    - **macOS/Linux:**
      ```bash
-     source venv/bin/activate
+     source bin/activate
      ```
 
-4. **Install dependencies:**
+3. **Install dependencies:**
    ```bash
    pip install --upgrade pip
    pip install -r requirements.txt
    ```
 
-5. **Set up environment variables:**
+4. **Set up environment variables:**
    - Copy the example above into a `.env` file and add your OpenAI API key.
-
----
 
 ## 🚀 Usage
 
@@ -157,8 +124,6 @@ python gradio-dashboard.py
   - Category classification (`text-classification.ipynb`)
   - Vector search experiments (`vector-search.ipynb`)
 
----
-
 ## 🧑‍💻 JupyterLab Configuration
 
 JupyterLab is enabled by default via config files in `etc/jupyter/`. To launch JupyterLab:
@@ -171,8 +136,6 @@ If you encounter issues, check that the extensions are enabled in:
 - `etc/jupyter/jupyter_server_config.d/jupyterlab.json`
 - `etc/jupyter/jupyter_notebook_config.d/jupyterlab.json`
 
----
-
 ## 🔒 Security Note
 
 By default, the Gradio dashboard is launched with `share=True`, which exposes your app to the public internet. For local-only use, change the last line in `gradio-dashboard.py` to:
@@ -180,8 +143,6 @@ By default, the Gradio dashboard is launched with `share=True`, which exposes yo
 ```python
 dashboard.launch(share=False)
 ```
-
----
 
 ### 3. **Production Deployment:**
 
@@ -191,8 +152,6 @@ dashboard.launch(share=False)
   ```
   - The app uses `share=True` for public Gradio links.
 - For advanced deployment (Docker, cloud, etc.), adapt as needed.
-
----
 
 ## 🤝 Contributing
 
@@ -209,8 +168,6 @@ We welcome contributions! To get started:
 - Test your changes before submitting.
 - Be respectful and constructive in code reviews.
 
----
-
 ## ⚠️ Known Issues
 
 - Requires Python 3.13+ (not all environments support this yet).
@@ -218,21 +175,15 @@ We welcome contributions! To get started:
 - First run may be slow due to model downloads.
 - No automated tests included yet.
 
----
-
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE) © 2025 Varad Pensalwar.
-
----
 
 ## 💬 Contact & Support
 
 - **Author:** Varad Pensalwar
 - **GitHub Issues:** [Open an issue](https://github.com/yourusername/BookSense/issues)
 - **Email:** varad.pensalwar@gmail.com
-
----
 
 ## 🙏 Acknowledgements
 
