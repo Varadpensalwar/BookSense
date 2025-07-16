@@ -86,14 +86,19 @@ OPENAI_API_KEY=your_openai_api_key_here
    cd BookSense
    ```
 
+ 2. **Create a virtual environment:**
+    ```bash
+     python -m venv booksence
+     ```
+
 2. **Activate the virtual environment:**
    - **Windows:**
      ```bash
-     Scripts\activate.bat
+     booksence\Scripts\activate.bat
      ```
    - **macOS/Linux:**
      ```bash
-     source bin/activate
+     source booksence/bin/activate
      ```
 
 3. **Install dependencies:**
